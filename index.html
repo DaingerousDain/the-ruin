@@ -415,6 +415,20 @@
             opacity: 0.9;
         }
 
+        /* NEW: Map Section */
+        .map-section {
+            padding: 80px 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        .map-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
         /* Footer */
         footer {
             background-color: #07222c;
@@ -730,6 +744,27 @@
             <h2 class="section-title">Plan Your Visit</h2>
             <p>Ready for your perfect beach day? Reserve a sunbed or cabana to guarantee your spot in paradise. We recommend arriving before sunset for the full experience.</p>
             <a href="#contact" class="btn" style="margin-top: 20px;">Book Now & Get Directions</a>
+        </div>
+    </section>
+
+    <!-- NEW: Interactive Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 style="color: #0a3643; margin-bottom: 20px;">Find Your Way to Paradise</h2>
+            <p style="max-width: 600px; margin: 0 auto 30px; color: #555;">
+                Located right on the sands of beautiful Hiriketiya Bay. Drop in for sunset.
+            </p>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.324888252277!2d80.7062558!3d5.9627145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae137005bf1bddd%3A0x132028481141ad5!2sThe%20Ruin%20(beach%20club)%20Hiriketiya!5e0!3m2!1sen!2slk!4v1700000000000!5m2!1sen!2slk"
+                    width="100%"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
         </div>
     </section>
 
