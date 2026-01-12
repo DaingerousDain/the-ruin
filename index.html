@@ -261,15 +261,21 @@
             margin-bottom: 20px;
         }
 
-        /* Menu Highlights */
+        /* Menu Highlights - UPDATED for 2x2 Grid & Images */
         .menu-highlights {
             background-color: #f9f6f0;
         }
         .menu-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
             gap: 35px;
             margin-top: 50px;
+        }
+        /* Make it one column on mobile */
+        @media (max-width: 768px) {
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
         }
         .menu-item {
             background: white;
@@ -280,9 +286,21 @@
             display: flex;
             flex-direction: column;
             height: 100%;
+            overflow: hidden; /* Keeps image corners rounded */
         }
         .menu-item:hover {
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        }
+        .menu-item-img {
+            height: 180px;
+            overflow: hidden;
+            border-radius: 10px 10px 0 0;
+            margin: -25px -25px 20px -25px; /* Aligns image with card edges */
+        }
+        .menu-item-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         .menu-item-header {
             display: flex;
@@ -415,7 +433,7 @@
             opacity: 0.9;
         }
 
-        /* NEW: Map Section */
+        /* Map Section */
         .map-section {
             padding: 80px 20px;
             background-color: #f9f9f9;
@@ -647,13 +665,16 @@
         </div>
     </section>
 
-    <!-- Menu Highlights -->
+    <!-- Menu Highlights - UPDATED with 2x2 Grid & Images -->
     <section class="menu-highlights" id="menu">
         <div class="container">
             <h2 class="section-title">Signature Flavors</h2>
             <p class="section-subtitle">A celebrated menu where Mexican street food meets Sri Lankan coastline freshness.</p>
             <div class="menu-grid">
                 <div class="menu-item">
+                    <div class="menu-item-img">
+                        <img src="https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?auto=format&fit=crop&w=600&q=80" alt="Crispy fried fish tacos">
+                    </div>
                     <div class="menu-item-header">
                         <h3 class="menu-item-title">Mahi Mahi Tacos</h3>
                         <span class="menu-item-price">LKR 2,500</span>
@@ -662,6 +683,9 @@
                     <span class="must-try">Most Ordered</span>
                 </div>
                 <div class="menu-item">
+                    <div class="menu-item-img">
+                        <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=600&q=80" alt="Grilled mushroom tacos">
+                    </div>
                     <div class="menu-item-header">
                         <h3 class="menu-item-title">Oyster Mushroom Tacos</h3>
                         <span class="menu-item-price">LKR 2,200</span>
@@ -670,6 +694,9 @@
                     <span class="must-try">Vegetarian Highlight</span>
                 </div>
                 <div class="menu-item">
+                    <div class="menu-item-img">
+                        <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=600&q=80" alt="Fresh tuna tostada">
+                    </div>
                     <div class="menu-item-header">
                         <h3 class="menu-item-title">Tuna Tostada</h3>
                         <span class="menu-item-price">LKR 2,800</span>
@@ -678,6 +705,9 @@
                     <span class="must-try">Chef's Special</span>
                 </div>
                 <div class="menu-item">
+                    <div class="menu-item-img">
+                        <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=600&q=80" alt="Refreshing mojito cocktail">
+                    </div>
                     <div class="menu-item-header">
                         <h3 class="menu-item-title">The Ruin Mojito</h3>
                         <span class="menu-item-price">LKR 1,800</span>
@@ -747,7 +777,7 @@
         </div>
     </section>
 
-    <!-- NEW: Interactive Map Section -->
+    <!-- Interactive Map Section -->
     <section class="map-section">
         <div class="container">
             <h2 style="color: #0a3643; margin-bottom: 20px;">Find Your Way to Paradise</h2>
