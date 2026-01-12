@@ -261,7 +261,7 @@
             margin-bottom: 20px;
         }
 
-        /* Menu Highlights - UPDATED for 2x2 Grid & Images */
+        /* Menu Highlights - UPDATED for 2x2 Grid & Images - FIXED ZOOM ISSUE */
         .menu-highlights {
             background-color: #f9f6f0;
         }
@@ -292,15 +292,21 @@
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
         }
         .menu-item-img {
-            height: 180px;
+            height: 200px; /* Slightly taller to show more */
             overflow: hidden;
-            border-radius: 10px 10px 0 0;
-            margin: -25px -25px 20px -25px; /* Aligns image with card edges */
+            border-radius: 10px;
+            margin: 0 0 20px 0; /* Removed negative margins */
+            background-color: #f9f6f0; /* Light background for padding area */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px; /* Add padding so food isn't touching edges */
         }
         .menu-item-img img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain; /* Changed from cover to contain - shows entire image */
+            border-radius: 8px;
         }
         .menu-item-header {
             display: flex;
